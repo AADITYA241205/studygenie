@@ -1,0 +1,16 @@
+# Development dependencies (optional)
+# Install with: pip install -r requirements-dev.txt
+
+# Code formatting
+black==23.12.1
+flake8==7.0.0
+
+# Testing
+pytest==7.4.3
+pytest-django==4.7.0
+
+# Debugging
+django-debug-toolbar==4.2.0
+
+# Documentation
+sphinx==7.2.6
