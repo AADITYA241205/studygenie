@@ -1,166 +1,287 @@
-# StudyGenie - AI-Powered Study Companion 🧞♂️
+# 📚✨ StudyGenie  
+### *Your AI-Powered Personal Study Companion*
 
-Transform your documents into interactive study materials with AI-powered summaries, quizzes, flashcards, and an intelligent tutor.
+> Transform PDFs & images into **summaries, quizzes, flashcards, and an AI tutor** — all in one place.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
-[![Django](https://img.shields.io/badge/django-4.2-green.svg)](https://www.djangoproject.com/)
+🚀 **Built at SUNHACKS Hackathon**  
+👥 **Team Name:** NameSpace  
+🏁 **Achievement:** Finalist (Reached Final Round)
 
-## 🚀 Features
+---
 
-- **Smart Document Upload** - PDFs and images with OCR support
-- **AI-Generated Summaries** - Powered by Google Gemini AI
-- **Dynamic Quizzes** - Contextual MCQs with multiple difficulty levels
-- **Interactive Flashcards** - Spaced repetition system for effective learning
-- **AI Tutor Chat** - Ask questions about your study materials
-- **Progress Analytics** - Track learning streaks and quiz scores
-- **Multi-language Support** - Summaries in English, Hindi, Marathi, and more
+## 🧠 What is StudyGenie?
 
-## 📋 Prerequisites
+**StudyGenie** is a full-stack, AI-powered web application that converts study documents (PDFs & images) into **interactive learning resources**:
 
-- Python 3.13 or higher
-- Google AI API key ([Get one here](https://makersuite.google.com/app/apikey))
-- Tesseract OCR (for image text extraction)
+- 📄 Smart summaries  
+- 📝 Auto-generated quizzes  
+- 🧩 Flashcards with spaced repetition  
+- 🤖 A context-aware AI tutor  
 
-## ⚡ Quick Setup
+It is designed to **reduce study time** and **increase retention** by turning passive reading into active learning.
 
-### Option 1: Automated Setup (Windows)
+---
 
-```bash
-# Run the setup script
-setup.bat
+## 🏅 Badges
 
-# Add your Google AI API key to .env
-# Then start the server
-run_server.bat
-```
+![Python](https://img.shields.io/badge/Python-3.13%2B-blue)
+![Django](https://img.shields.io/badge/Django-4.2-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Hackathon](https://img.shields.io/badge/Built%20at-SUNHACKS-orange)
 
-### Option 2: Manual Setup
+---
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/studygenie.git
-cd studygenie
+## ✨ Feature Highlights
 
-# 2. Install dependencies
-pip install -r requirements.txt
+### 📂 Document Upload & Processing
+- Supports **PDFs & Images (JPG, PNG)**
+- PDF text extraction via **PyPDF2**
+- OCR for scanned images using **Tesseract**
+- Secure file validation & storage
 
-# 3. Set up environment variables
-copy .env.example .env
-# Edit .env and add your Google AI API key
+---
 
-# 4. Setup database
-python manage.py makemigrations
-python manage.py migrate
+### 🧠 AI-Powered Summaries
+- 100–150 word **document-specific summaries**
+- Bullet-point key takeaways
+- Language-aware generation
+- Fallback logic if AI fails
 
-# 5. Create demo users
-python create_users.py
+---
 
-# 6. Start the development server
-python manage.py runserver
-```
+### 📝 Dynamic Quiz Generation
+- Exactly **10 MCQs per quiz**
+- Difficulty levels:
+  - 🟢 Easy – Recall & definitions
+  - 🟡 Medium – Application & reasoning
+  - 🔴 Hard – Analysis & evaluation
+- Explanations for every answer
+- Stored quiz history & scoring
 
-## 🔑 Login Credentials
+---
 
-After running `create_users.py`, use these credentials:
+### 🧩 Flashcards with Spaced Repetition
+- 8–12 flashcards per document
+- Optimized for quick recall
+- Tracks cards that need revision
 
-- **Demo User**: `demo` / `demo123`
-- **Student**: `student1` / `password123`
-- **Admin**: `admin` / `admin123`
+---
 
-## 📖 Usage Guide
+### 🤖 AI Tutor (Chat Assistant)
+- Ask questions in natural language
+- Answers based **only on your uploaded documents**
+- Maintains conversation history
+- Perfect for last-minute doubts
 
-1. **Login** → Use any of the demo credentials
-2. **Upload** → Select PDF or image file (study notes, textbooks, etc.)
-3. **Study** → View AI-generated summary of your material
-4. **Practice** → Take personalized quizzes with adjustable difficulty
-5. **Review** → Use flashcards with spaced repetition
-6. **Ask** → Chat with AI tutor about specific questions
-7. **Track** → Monitor progress and learning streaks
+---
 
-## 🛠 Tech Stack
+### 🌍 Multi-Language Support
+Supported languages:
+- English
+- Hindi
+- Marathi
+- Spanish
+- French
+- German
 
-- **Backend**: Django 4.2, SQLite
-- **Frontend**: Bootstrap 5, JavaScript
-- **AI**: Google Gemini 1.5 Flash
-- **Processing**: PyPDF2, Pytesseract OCR
-- **Deployment**: Python 3.13+
+Includes automatic language detection and translation.
 
-## 🌟 Key Workflows
+---
 
-### Document Processing Pipeline
+### 📊 Progress Tracking
+- Learning streaks 🔥
+- Quiz performance analytics
+- Flashcards reviewed
+- Documents uploaded
 
-```
-Upload → Text Extraction → AI Processing → Content Generation
-   ↓           ↓              ↓              ↓
- PDF/IMG → OCR/Parse → Gemini API → Summary/Quiz/Cards
-```
+---
 
-### AI-Powered Features
+## 🖼️ Screenshots & Demo
 
-- **Summaries**: Contextual, structured content overviews (100-150 words)
-- **Quizzes**: Auto-generated MCQs with 3 difficulty levels (Easy/Medium/Hard)
-- **Flashcards**: Key terms and definitions extraction
-- **Tutor**: Context-aware Q&A using document content
+> 📌 **Add screenshots here**
+- Dashboard overview
+- Document upload page
+- Quiz interface
+- Flashcard review
+- AI tutor chat
 
-## 🔧 Configuration
+*(Screenshots/GIFs greatly improve GitHub visibility)*
 
-### Google AI API Setup
+---
 
-1. Get API key: https://makersuite.google.com/app/apikey
-2. Add to `.env`: `GOOGLE_AI_API_KEY=your-api-key-here`
-3. Restart server
+## 🛠️ Tech Stack
 
-### Admin Panel
+### Backend
+- **Django 4.2**
+- Python 3.13+
 
-- URL: http://127.0.0.1:8000/admin/
-- Manage users, documents, quizzes, and progress
+### AI Engine
+- **Google Gemini 1.5 Flash API**
+
+### Frontend
+- HTML5, CSS3
+- Bootstrap 5
+- Vanilla JavaScript
+
+### Database
+- SQLite (development)
+- PostgreSQL (production-ready)
+
+### Document Processing
+- PyPDF2 (PDF text extraction)
+- Pytesseract + Pillow (OCR)
+
+---
 
 ## 📁 Project Structure
 
 ```
 studygenie/
-├── authentication/      # User authentication
-├── dashboard/          # Main dashboard and AI assistant
-├── documents/          # Document upload and processing
-├── flashcards/         # Flashcard generation and review
-├── quizzes/           # Quiz generation and taking
-├── static/            # CSS, JS, images
-├── templates/         # HTML templates
-├── media/             # Uploaded documents
-├── ai_services.py     # AI integration (Gemini)
-├── create_users.py    # Demo user creation script
-└── manage.py          # Django management
+├── authentication/
+├── dashboard/
+├── documents/
+├── quizzes/
+├── flashcards/
+├── static/
+├── templates/
+├── media/documents/
+├── studygenie/
+├── ai_services.py
+├── create_users.py
+├── manage.py
+├── requirements.txt
+├── .env.example
+├── setup.bat
+└── run_server.bat
 ```
 
-## 🎯 Perfect For
+---
 
-- **Students** - Convert textbooks into study materials
-- **Educators** - Create quizzes from course content
-- **Professionals** - Learn from technical documents
-- **Researchers** - Summarize academic papers
+## ⚙️ Installation & Setup
+### 🔑 Prerequisites
+- Python 3.13+
+- Google AI API Key  👉 https://makersuite.google.com/app/apikey
+- Tesseract OCR installed
 
-## 🤝 Contributing
+### 🚀 Quick Setup (Windows)
+```
+setup.bat
+```
+1. Add your API key in .env
+2. Run:
+```
+run_server.bat
+```
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Google Gemini AI for powerful language processing
-- Django community for the excellent framework
-- Bootstrap for responsive UI components
-
-## 📧 Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review the code comments
+### 🧑‍💻 Manual Setup
+```
+git clone <repository-url>
+cd studygenie
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+Create .env:
+```
+GOOGLE_AI_API_KEY=your_api_key_here
+```
+Run:
+```
+python manage.py migrate
+python create_users.py
+python manage.py runserver
+```
+### 🔐 Demo Credentials
+| Role  | Username | Password    |
+| ----- | -------- | ----------- |
+| User  | demo     | demo123     |
+| User  | student1 | password123 |
+| Admin | admin    | admin123    |
 
 ---
+
+## 🔌 AI Services API (Core Functions)
+```
+generate_summary_with_ai(text, length="medium")
+generate_quiz_with_ai(text, difficulty="medium")
+generate_flashcards_with_ai(text)
+detect_language(text)
+translate_content(text, target_language)
+```
+Powered by:
+```
+gemini-1.5-flash
+```
+
+---
+
+## 🧪 Workflow
+```
+Login → Upload Document → Text Extraction
+        ↓
+      AI Processing
+        ↓
+ Summary + Quiz + Flashcards
+        ↓
+ Study → Practice → Review → Ask AI Tutor
+        ↓
+ Progress Tracking & Analytics
+```
+
+---
+
+## 🎯 Use Cases
+- 🎓 Students – Convert notes into study material
+- 👨‍🏫 Educators – Generate quizzes instantly
+- 👨‍💻 Professionals – Learn from technical docs
+- 📚 Researchers – Summarize academic papers
+- 🌍 Language learners – Multilingual study support
+
+---
+
+## 🔐 Security
+- Environment variables for secrets
+- CSRF protection
+- Auth-guarded routes
+- File upload validation
+- Django ORM (SQL injection safe)
+
+---
+
+## 🛣️ Roadmap
+- 🔊 Voice-based AI tutor
+- 📱 Mobile-responsive PWA
+- 📈 Advanced analytics
+- 📤 Export quizzes & flashcards
+- 🤝 Collaborative study rooms
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!
+Please see:
+- CONTRIBUTING.md
+- Issue & PR templates
+
+---
+
+## 📜 License
+This project is licensed under the MIT License.
+
+---
+
+## 🙏 Acknowledgments
+- SUNHACKS Hackathon for the platform
+- Team NameSpace 💙
+- Google Gemini API
+- Django & Open-source community
+
+---
+
+## 📬 Contact & Support
+👤 Aaditya Siddharth Bansod
+🔗 GitHub: https://github.com/AADITYA241205
+💼 LinkedIn: (https://www.linkedin.com/in/aaditya-siddharth-bansod-889590333/)
 
 Made with ❤️ for students everywhere
